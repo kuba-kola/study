@@ -1,12 +1,13 @@
 const allowAlphanumericOnly = /[^ A-Za-z0-9]/
 const whetherEveryStringIncludes = (checkedString = '', strings = []) => strings.every(s => s.includes(checkedString))
 const findFirstIncluded = (substring = '', strings = []) => {
-for (let i = 0; i < substring.length; i++) {
-const testingPart = substring.substr(i, substring.length)
-if(whetherEveryStringIncludes(testingPart, strings)) {
-return testingPart
+    for (let i = 0; i < substring.length; i++) {
+        const testingPart = substring.substr(i, substring.length)
+        if(whetherEveryStringIncludes(testingPart, strings)) {
+        return testingPart
+    }
 }
-}
+
 return null
 }
 const findTheLongestSubstring = (strings = []) => {
